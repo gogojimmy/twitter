@@ -11,4 +11,5 @@ h1 Tweets
 - @tweets.each do |tweet|
   .card
     .card-body
+      p.card-title= tweet.user.email
       p.card-text= tweet.body

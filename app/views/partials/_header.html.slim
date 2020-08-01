@@ -1,0 +1,7 @@
+nav.navbar.navbar-light.bg-light
+  a.navbar-brand Twiiter
+  - if user_signed_in?
+    = current_user.email
+    = link_to '登出', destroy_user_session_path, method: :DELETE
+  - else
+    = link_to 'Login', new_user_session_path
