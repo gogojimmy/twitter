@@ -1,0 +1,14 @@
+h1 Tweets
+
+.row
+  .col-12
+    = form_with model: @tweet, url: tweets_path do |f|
+      .form-group
+        = f.text_area :body, class: 'form-control'
+      .form-group
+        = f.submit 'Submit', class: 'btn btn-primary'
+
+- @tweets.each do |tweet|
+  .card
+    .card-body
+      p.card-text= tweet.body
